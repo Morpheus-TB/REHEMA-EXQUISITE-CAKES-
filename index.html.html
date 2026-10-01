@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rehema's Exquisite Cakes | Luxury Bakery</title>
+    <meta
+      name="description"
+      content="Signature luxury cakes, bespoke celebrations, and refined confectionery for unforgettable moments."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cream: '#fbf7ef', oat: '#f2eadc', paper: '#fffdf8',
+              espresso: '#30221b', 'espresso-soft': '#58473d', crust: '#9a512e',
+              caramel: '#bd8742', 'caramel-light': '#e4c893', muted: '#6e6258', line: '#e5d9c8'
+            },
+            fontFamily: {
+              serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+              sans: ['DM Sans', 'sans-serif'],
+              display: ['Cormorant Garamond', 'serif'],
+              body: ['DM Sans', 'sans-serif']
+            },
+            boxShadow: {
+              nav: '0 12px 34px rgba(48, 34, 27, 0.07)',
+              artisan: '0 18px 48px rgba(48, 34, 27, 0.09), 0 3px 10px rgba(48, 34, 27, 0.04)',
+              lift: '0 30px 62px rgba(48, 34, 27, 0.16), 0 8px 18px rgba(48, 34, 27, 0.07)',
+              drawer: '-22px 0 60px rgba(31, 24, 19, 0.18)'
+            },
+            keyframes: {
+              'artisan-float': { '0%, 100%': { translate: '0 0' }, '50%': { translate: '0 -10px' } },
+              'badge-bounce': { '0%, 100%': { transform: 'scale(1)' }, '38%': { transform: 'scale(1.32)' }, '68%': { transform: 'scale(.94)' } },
+              'cart-fly': { from: { opacity: '0.95', transform: 'translate3d(var(--fly-x), var(--fly-y), 0) scale(1)' }, to: { opacity: '0', transform: 'translate3d(var(--fly-to-x), var(--fly-to-y), 0) scale(.12)' } },
+              sheen: { from: { transform: 'translateX(-140%) skewX(-18deg)' }, to: { transform: 'translateX(260%) skewX(-18deg)' } }
+            },
+            animation: {
+              'artisan-float': 'artisan-float 7s ease-in-out infinite',
+              'badge-bounce': 'badge-bounce 420ms cubic-bezier(.2,.8,.2,1)',
+              'cart-fly': 'cart-fly 680ms cubic-bezier(.2,.75,.25,1) forwards',
+              sheen: 'sheen 850ms ease-out'
+            }
+          }
+        }
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="b.css" />
+  </head>
+  <body class="leading-relaxed text-neutral-900 antialiased">
+    <header class="site-header sticky top-0 z-30 border-b border-neutral-200/60 backdrop-blur-xl">
+      <div class="container nav-shell mx-auto w-full max-w-7xl px-6">
+        <div class="brand-block">
+          <img
+            src="WhatsApp Image 2026-07-22 at 13.34.00.jpeg"
+            alt="Rehema's Exquisite Cakes logo"
+            class="brand-mark"
+          />
+          <div class="brand-copy">
+            <p class="brand-kicker">Luxury bakery atelier</p>
+            <h1 class="font-serif tracking-wide">Rehema's Exquisite Cakes</h1>
+          </div>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#about">Our story</a>
+          <a href="#menu">Signature cakes</a>
+          <a href="#order">Inquiry</a>
+          <a href="#cart" class="view-cart-link">View cart <span class="cart-count" aria-label="Items in cart">0</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero bg-stone-50 py-16 text-neutral-900 md:py-24" id="home">
+        <div class="container hero__inner mx-auto w-full max-w-7xl px-6">
+          <div class="hero__content">
+            <p class="eyebrow">Artisanal cakes for life’s grandest occasions</p>
+            <h2 class="font-serif leading-none">Where elegance meets indulgence.</h2>
+            <p class="hero__lede">
+              Bespoke confectionery designed with meticulous detail, refined flavor,
+              and a touch of timeless luxury.
+            </p>
+            <div class="hero__actions">
+              <a href="#menu" class="button button--primary transition-all duration-300 hover:opacity-80">Explore collection</a>
+              <a href="#order" class="button button--secondary transition-all duration-300 hover:opacity-80">Book a consultation</a>
+            </div>
+          </div>
+
+          <div class="hero__showcase" aria-label="Featured cake showcase">
+            <div class="feature-card feature-card--large">
+              <img src="IMG-20260705-WA0015.jpg" alt="Elegant wedding cake" />
+              <div class="feature-card__meta">
+                <span>Signature creation</span>
+                <strong>Wedding Cakes</strong>
+              </div>
+            </div>
+            <div class="feature-card feature-card--small">
+              <img src="WhatsApp Image 2026-07-22 at 14.08.12.jpeg" alt="Chocolate truffle cake" />
+              <div class="feature-card__meta">
+                <span>Chef’s favorite</span>
+                <strong>Decadent Truffle Royale</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="story bg-stone-50 py-16 text-neutral-900 md:py-24" id="about">
+        <div class="container story__inner mx-auto w-full max-w-7xl px-6">
+          <div class="story__copy">
+            <p class="eyebrow eyebrow--dark">About our atelier</p>
+            <h3>Welcome to Rehema's Exquisite Cakes</h3>
+            <p>
+              At Rehema's Exquisite Cakes, we believe that every celebration begins with a
+              remarkable dessert. What started as a quiet love for baking in a home kitchen has grown into a
+              couture confectionery studio devoted to exceptional craftsmanship.
+            </p>
+            <p>
+              We blend time-honoured techniques with modern artistry to create cakes that are beautiful,
+              memorable, and deeply personal. Our philosophy is simple: thoughtful ingredients, refined design,
+              and an experience that feels as luxurious as the occasion itself.
+            </p>
+          </div>
+
+          <div class="story__panel">
+            <div class="story__image-stack">
+              <img src="IMG-20260705-WA0041.jpg" alt="Luxury cake detail" class="story__image story__image--main" />
+              <img src="IMG-20260705-WA0020.jpg" alt="Custom cake styling" class="story__image story__image--accent" />
+            </div>
+            <ul class="story__points">
+              <li>
+                <span>Premium ingredients</span>
+                <p>Fresh butter, real vanilla, Belgian chocolate, and carefully sourced seasonal fruits.</p>
+              </li>
+              <li>
+                <span>Artisanal craftsmanship</span>
+                <p>Each finish is shaped by hand, from sculpted floral details to elegant piping and gilded accents.</p>
+              </li>
+              <li>
+                <span>Bespoke flavour design</span>
+                <p>Classic favourites and modern luxury combinations, balanced to delight every palate.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-showcase">
+        <div class="container feature-showcase__wrap">
+          <article class="feature-layout">
+            <div class="feature-layout__media">
+              <img src="IMG-20260705-WA0015.jpg" alt="Wedding cake display" />
+            </div>
+            <div class="feature-layout__content">
+              <p class="eyebrow eyebrow--dark">Flagship collection</p>
+              <h3>Wedding Cakes</h3>
+              <p>
+                Sculptural silhouettes, soft buttercream textures, and handcrafted flourishes designed to become
+                the focal point of your celebration. Every tier is tailored to your venue, palette, and story.
+              </p>
+              <div class="feature-layout__details">
+                <span>From Ksh 3,500</span>
+                <a href="#order">Request a bespoke consultation</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="feature-layout feature-layout--reverse">
+            <div class="feature-layout__media">
+              <img src="WhatsApp Image 2026-07-22 at 14.08.12.jpeg" alt="Luxury chocolate cake" />
+            </div>
+            <div class="feature-layout__content">
+              <p class="eyebrow eyebrow--dark">The atelier signature</p>
+              <h3>Decadent Truffle Royale</h3>
+              <p>
+                A grand, velvety chocolate experience layered with silky ganache, a delicate cocoa finish, and a
+                polished look worthy of a couture dessert table. It is decadent, balanced, and unmistakably luxurious.
+              </p>
+              <div class="feature-layout__details">
+                <span>From Ksh 4,000</span>
+                <a href="#order">Plan your order</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="products-section bg-stone-50 py-16 text-neutral-900 md:py-24" id="menu">
+        <div class="container mx-auto grid w-full max-w-7xl grid-cols-1 gap-7 px-6 sm:grid-cols-2 xl:grid-cols-4">
+          <div class="section-heading col-span-full">
+            <p class="eyebrow eyebrow--dark">Curated collection</p>
+            <h3>A Lifetime of Sweet Memories</h3>
+            <p class="section-subtitle">Thoughtfully crafted cakes for birthdays, weddings, and every special occasion.</p>
+          </div>
+
+          <div class="milestone-chapter">
+            <div class="product-grid">
+              <!-- Kiddies Cake Club -->
+              <article class="cake-card">
+                <div class="cake-card__image-wrap">
+                  <img src="IMG-20260705-WA0023.jpg" alt="Kiddies cake club" />
+                </div>
+                <div class="cake-card__body">
+                  <div class="cake-card__header">
+                    <h4>Kiddies Cake Club</h4>
+                    <span class="price">From Ksh 2,500</span>
+                  </div>
+                  <p>A bright, playful celebration cake filled with joyful color, cheerful detail, and flavors designed to delight children and parents alike at family gatherings.</p>
+                  <div class="cake-card__actions">
+                    <button class="button button--primary add-to-cart" type="button">Add to cart</button>
+                    <button class="card-link view-more-btn" type="button" data-images='["IMG-20260705-WA0023.jpg", "IMG-20260705-WA0015.jpg", "WhatsApp Image 2026-07-22 at 13.34.00.jpeg"]'>View details</button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Boys to Men -->
+              <article class="cake-card">
+                <div class="cake-card__image-wrap">
+                  <img src="IMG-20260705-WA0022.jpg" alt="Boys to men cake" />
+                </div>
+                <div class="cake-card__body">
+                  <div class="cake-card__header">
+                    <h4>Boys to Men</h4>
+                    <span class="price">From Ksh 3,000</span>
+                  </div>
+                  <p>A modern, elevated cake designed for milestone birthdays and coming-of-age moments, balancing clean styling with rich flavor and confident presence.</p>
+                  <div class="cake-card__actions">
+                    <button class="button button--primary add-to-cart" type="button">Add to cart</button>
+                    <button class="card-link view-more-btn" type="button" data-images='["IMG-20260705-WA0022.jpg", "IMG-20260705-WA0043.jpg", "IMG-20260705-WA0023.jpg"]'>View details</button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- The Grad Cap -->
+              <article class="cake-card">
+                <div class="cake-card__image-wrap">
+                  <img src="IMG-20260705-WA0027.jpg" alt="Graduation cake" />
+                </div>
+                <div class="cake-card__body">
+                  <div class="cake-card__header">
+                    <h4>The Grad Cap</h4>
+                    <span class="price">From Ksh 3,000</span>
+                  </div>
+                  <p>Celebrate achievement with a polished graduation cake inspired by academic milestones and crafted to honor ambition with elegance and taste.</p>
+                  <div class="cake-card__actions">
+                    <button class="button button--primary add-to-cart" type="button">Add to cart</button>
+                    <button class="card-link view-more-btn" type="button" data-images='["IMG-20260705-WA0027.jpg", "IMG-20260705-WA0026.jpg", "IMG-20260705-WA0023.jpg"]'>View details</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="milestone-chapter">
+            <div class="product-grid">
+              <!-- Asili Delights -->
+              <article class="cake-card">
+                <div class="cake-card__image-wrap">
+                  <img src="IMG-20260705-WA0031.jpg" alt="Asili delight cake" />
+                </div>
+                <div class="cake-card__body">
+                  <div class="cake-card__header">
+                    <h4>Asili Delights</h4>
+                    <span class="price">From Ksh 3,000</span>
+                  </div>
+                  <p>Inspired by heritage and cultural elegance, this design celebrates tradition through refined form, warm tones, and beautifully layered flavors for meaningful occasions.</p>
+                  <div class="cake-card__actions">
+                    <button class="button button--primary add-to-cart" type="button">Add to cart</button>
+                    <button class="card-link view-more-btn" type="button" data-images='["IMG-20260705-WA0031.jpg", "IMG-20260705-WA0035.jpg", "IMG-20260705-WA0033.jpg"]'>View details</button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Strawberry -->
+              <article class="cake-card">
+                <div class="cake-card__image-wrap">
+                  <img src="IMG-20260705-WA0044.jpg" alt="Strawberry cake" />
+                </div>
+                <div class="cake-card__body">
+                  <div class="cake-card__header">
+                    <h4>Strawberry</h4>
+                    <span class="price">From Ksh 5,000</span>
+                  </div>
+                  <p>A light and fragrant celebration cake bursting with strawberry notes, fluffy cream, and a polished finish that feels fresh, bright, and effortlessly refined.</p>
+                  <div class="cake-card__actions">
+                    <button class="button button--primary add-to-cart" type="button">Add to cart</button>
+                    <button class="card-link view-more-btn" type="button" data-images='["IMG-20260705-WA0044.jpg", "IMG-20260705-WA0037.jpg", "IMG-20260705-WA0022.jpg"]'>View details</button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Crimson Velvet Whisper -->
+              <article class="cake-card">
+                <div class="cake-card__image-wrap">
+                  <img src="IMG-20260705-WA0045.jpg" alt="Crimson velvet cake" />
+                </div>
+                <div class="cake-card__body">
+                  <div class="cake-card__header">
+                    <h4>Crimson Velvet Whisper</h4>
+                    <span class="price">From Ksh 8,000</span>
+                  </div>
+                  <p>A statement red velvet masterpiece layered with lush frosting and dramatic, elegant finishing touches designed for landmark birthdays and high-impact occasions.</p>
+                  <div class="cake-card__actions">
+                    <button class="button button--primary add-to-cart" type="button">Add to cart</button>
+                    <button class="card-link view-more-btn" type="button" data-images='["IMG-20260705-WA0045.jpg", "IMG-20260705-WA0024.jpg", "IMG-20260705-WA0044.jpg"]'>View details</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="milestone-chapter">
+            <div class="product-grid">
+              <!-- Budget Wedding Cake -->
+              <article class="cake-card">
+                <div class="cake-card__image-wrap">
+                  <img src="IMG-20260705-WA0013.jpg" alt="Budget wedding cake" />
+                </div>
+                <div class="cake-card__body">
+                  <div class="cake-card__header">
+                    <h4>Budget Wedding Cake</h4>
+                    <span class="price">From Ksh 3,500</span>
+                  </div>
+                  <p>A graceful, intimate option with elegant presentation and premium taste, thoughtfully designed for smaller guest lists and beautifully styled events.</p>
+                  <div class="cake-card__actions">
+                    <button class="button button--primary add-to-cart" type="button">Add to cart</button>
+                    <button class="card-link view-more-btn" type="button" data-images='["IMG-20260705-WA0013.jpg", "IMG-20260705-WA0016.jpg", "IMG-20260705-WA0020.jpg"]'>View details</button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Wedding Cake -->
+              <article class="cake-card">
+                <div class="cake-card__image-wrap">
+                  <img src="IMG-20260705-WA0015.jpg" alt="Wedding cake" />
+                </div>
+                <div class="cake-card__body">
+                  <div class="cake-card__header">
+                    <h4>Wedding Cake</h4>
+                    <span class="price">From Ksh 3,500 <br> Per KG</span>
+                  </div>
+                  <p>Elegantly crafted to become the centerpiece of your celebration, featuring layered richness, refined finishes, and graceful detailing suited to your love story.</p>
+                  <div class="cake-card__actions">
+                    <button class="button button--primary add-to-cart" type="button">Add to cart</button>
+                    <button class="card-link view-more-btn" type="button" data-images='["IMG-20260705-WA0015.jpg", "WhatsApp Image 2026-07-22 at 13.34.00.jpeg", "IMG-20260705-WA0020.jpg"]'>View details</button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Decadent Truffle Royale -->
+              <article class="cake-card">
+                <div class="cake-card__image-wrap">
+                  <img src="WhatsApp Image 2026-07-22 at 14.08.12.jpeg" alt="Truffle royale cake" />
+                </div>
+                <div class="cake-card__body">
+                  <div class="cake-card__header">
+                    <h4>Decadent Truffle Royale</h4>
+                    <span class="price">From Ksh 4,000</span>
+                  </div>
+                  <p>A profound chocolate indulgence with silky ganache depth, rich cocoa notes, and a striking finish that feels regal for milestone dinners and refined celebrations.</p>
+                  <div class="cake-card__actions">
+                    <button class="button button--primary add-to-cart" type="button">Add to cart</button>
+                    <button class="card-link view-more-btn" type="button" data-images='["WhatsApp Image 2026-07-22 at 14.08.12.jpeg", "IMG-20260705-WA0042.jpg", "IMG-20260705-WA0020.jpg", "IMG-20260705-WA0028.jpg", "IMG-20260705-WA0041.jpg", "IMG-20260705-WA0040.jpg"]'>View details</button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- The Royal Agrabah Enchantment -->
+              <article class="cake-card">
+                <div class="cake-card__image-wrap">
+                  <img src="IMG-20260724-WA0023.jpg" alt="Royal Agrabah cake" />
+                </div>
+                <div class="cake-card__body">
+                  <div class="cake-card__header">
+                    <h4>The Royal Agrabah Enchantment</h4>
+                    <span class="price">From Ksh 4,500</span>
+                  </div>
+                  <p>A pastel, storybook-inspired masterpiece finished with buttercream detailing, gold accents, and a magical presence that transforms any grand birthday into a memorable scene.</p>
+                  <div class="cake-card__actions">
+                    <button class="button button--primary add-to-cart" type="button">Add to cart</button>
+                    <button class="card-link view-more-btn" type="button" data-images='["IMG-20260724-WA0023.jpg", "IMG-20260705-WA0023.jpg", "WhatsApp Image 2026-07-22 at 13.34.00.jpeg"]'>View details</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="milestone-chapter">
+            <div class="product-grid">
+              <!-- The Gilded Crumb -->
+              <article class="cake-card">
+                <div class="cake-card__image-wrap">
+                  <img src="IMG-20260705-WA0043.jpg" alt="Gilded crumb cake" />
+                </div>
+                <div class="cake-card__body">
+                  <div class="cake-card__header">
+                    <h4>The Gilded Crumb</h4>
+                    <span class="price">From Ksh 2,500</span>
+                  </div>
+                  <p>An exquisitely finished confection combining artisan texture, refined ingredients, and a quietly luxurious aesthetic for intimate gatherings and elevated celebrations.</p>
+                  <div class="cake-card__actions">
+                    <button class="button button--primary add-to-cart" type="button">Add to cart</button>
+                    <button class="card-link view-more-btn" type="button" data-images='["IMG-20260705-WA0043.jpg", "IMG-20260705-WA0044.jpg", "IMG-20260705-WA0015.jpg"]'>View details</button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Retirement -->
+              <article class="cake-card">
+                <div class="cake-card__image-wrap">
+                  <img src="IMG-20260705-WA0029.jpg" alt="Retirement cake" />
+                </div>
+                <div class="cake-card__body">
+                  <div class="cake-card__header">
+                    <h4>Retirement</h4>
+                    <span class="price">From Ksh 2,500</span>
+                  </div>
+                  <p>A thoughtful tribute cake for a well-earned chapter, blending nostalgic charm with polished detailing and indulgent flavors worthy of a remarkable farewell celebration.</p>
+                  <div class="cake-card__actions">
+                    <button class="button button--primary add-to-cart" type="button">Add to cart</button>
+                    <button class="card-link view-more-btn" type="button" data-images='["IMG-20260705-WA0029.jpg", "IMG-20260705-WA0023.jpg", "IMG-20260705-WA0015.jpg"]'>View details</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="inquiry bg-stone-100 py-16 text-neutral-900 md:py-24" id="order">
+        <div class="container inquiry__inner mx-auto w-full max-w-7xl px-6">
+          <div class="inquiry__copy">
+            <p class="eyebrow eyebrow--dark">Custom consultation</p>
+            <h3>Bring your dream celebration to life.</h3>
+            <p>
+              Share your occasion, preferred palette, flavour idea, and guest count, and our team will create a
+              tailored concept for your event.
+            </p>
+          </div>
+
+          <form class="inquiry-form">
+            <div class="form-row">
+              <label>
+                <span>Your name</span>
+                <input type="text" name="name" placeholder="Your full name" required />
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" placeholder="Email address" required />
+              </label>
+            </div>
+
+            <label>
+              <span>Occasion</span>
+              <select name="occasion" required>
+                <option value="" disabled selected>Select your occasion</option>
+                <option value="wedding">Wedding</option>
+                <option value="birthday">Birthday</option>
+                <option value="anniversary">Anniversary</option>
+                <option value="corporate">Corporate</option>
+                <option value="custom">Custom event</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Project details</span>
+              <textarea
+                name="details"
+                rows="5"
+                placeholder="Tell us about your ideal cake, flavour preferences, guest count, and overall style."
+              ></textarea>
+            </label>
+
+            <button type="submit" class="button button--primary button--submit">
+              <span class="btn-text">Submit custom inquiry</span>
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <!-- Main Footer Content -->
+        <div class="footer__main">
+          <!-- Brand & Contact -->
+          <div class="footer__section footer__section--primary">
+            <h3 class="footer__brand">Rehema's Exquisite Cakes</h3>
+            <p class="footer__tagline">Luxury bakery atelier</p>
+            <div class="footer__contact-block">
+              <p><a href="tel:+254719333451" class="footer__link">+254 719 333 451</a></p>
+              <p><a href="mailto:rehemalosa@gmail.com" class="footer__link">rehemalosa@gmail.com</a></p>
+              <p class="footer__location">Nairobi, Kenya</p>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div class="footer__divider"></div>
+
+          <!-- Hours & Info -->
+          <div class="footer__section">
+            <p class="footer__label">Studio Hours</p>
+            <p class="footer__info">Monday – Saturday</p>
+            <p class="footer__info">8:00 AM – 6:00 PM</p>
+            <p class="footer__info footer__info--note">Sunday by appointment</p>
+          </div>
+
+          <!-- Divider -->
+          <div class="footer__divider"></div>
+
+          <!-- Social -->
+          <div class="footer__section">
+            <p class="footer__label">Follow us</p>
+            <div class="footer__socials">
+              <a href="https://www.instagram.com/rehemalosa" target="_blank" rel="noreferrer" class="footer__social-icon footer__social-icon--instagram" aria-label="Follow on Instagram" title="Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.117.6c-.794.272-1.473.646-2.154 1.327-.682.681-1.055 1.35-1.327 2.154-.266.788-.467 1.657-.527 2.935C.038 8.333.015 8.74.015 12c0 3.26.016 3.667.072 4.947.06 1.277.261 2.148.527 2.935.272.794.646 1.473 1.327 2.154.682.682 1.35 1.055 2.154 1.327.787.266 1.657.467 2.934.527 1.28.058 1.687.072 4.947.072s3.668-.016 4.947-.072c1.28-.06 2.149-.261 2.936-.527.793-.272 1.472-.646 2.154-1.327.681-.682 1.055-1.35 1.326-2.154.266-.787.467-1.657.527-2.935.058-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.261-2.148-.527-2.935-.272-.794-.645-1.473-1.327-2.154-.681-.682-1.35-1.055-2.154-1.327-.789-.266-1.657-.467-2.936-.527C15.667.048 15.56.015 12 0zm0 2.16c3.203 0 3.585.009 4.849.070 1.171.054 1.805.244 2.227.414.561.217.96.477 1.382.896.419.42.679.819.896 1.381.171.422.36 1.057.413 2.227.061 1.264.07 1.646.07 4.849s-.009 3.585-.07 4.849c-.054 1.171-.244 1.805-.414 2.227-.217.561-.477.96-.896 1.382-.42.419-.819.679-1.381.896-.422.171-1.057.36-2.227.413-1.264.061-1.646.07-4.849.07s-3.585-.009-4.849-.07c-1.171-.054-1.805-.244-2.227-.414-.561-.217-.96-.477-1.382-.896-.419-.42-.679-.819-.896-1.381-.171-.422-.36-1.057-.413-2.227-.061-1.264-.07-1.646-.07-4.849s.009-3.585.07-4.849c.054-1.171.244-1.805.414-2.227.217-.561.477-.96.896-1.382.42-.419.819-.679 1.381-.896.422-.171 1.057-.36 2.227-.413 1.264-.061 1.646-.07 4.849-.07"/></svg>
+              </a>
+              <a href="https://www.facebook.com/rehemalosa" target="_blank" rel="noreferrer" class="footer__social-icon footer__social-icon--facebook" aria-label="Follow on Facebook" title="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="https://www.tiktok.com/rehemalosa" target="_blank" rel="noreferrer" class="footer__social-icon footer__social-icon--tiktok" aria-label="Follow on TikTok" title="TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.498 3.094c4.191 0 4.591 4.325 4.591 4.325 0 3.302-2.001 6.084-4.591 6.084.9.631 1.956 1.753 1.956 3.504 0 2.504-2.661 4.56-5.48 4.56s-7.738-3.684-9.201-8.514c-.88-2.779-.881-5.674.881-8.678C28.1.079 24.66-1.504 21.2 1.504c-2.099 1.878-3.05 4.178-2.975 6.355-.913-.913-2.651-1.846-4.326-1.846-3.302 0-5.973 2.68-5.973 5.974 0 3.302 2.68 5.974 5.974 5.974 2.308 0 4.321-1.301 5.309-3.207v5.204c0 .804.651 1.455 1.455 1.455s1.455-.651 1.455-1.455V12.15c0-1.302 1.057-2.359 2.359-2.359s2.359 1.057 2.359 2.359v9.924c0 .804.651 1.455 1.455 1.455s1.455-.651 1.455-1.455V12.15c0-4.408-3.576-7.984-7.984-7.984z"/></svg>
+              </a>
+              <a href="https://www.youtube.com/rehemalosa" target="_blank" rel="noreferrer" class="footer__social-icon footer__social-icon--youtube" aria-label="Follow on YouTube" title="YouTube">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Notice -->
+      <div class="footer__notice-bar">
+        <p class="footer__notice-text">Bespoke orders welcomed with 3 to 7 days notice</p>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer__copyright-bar">
+        <p>&copy; 2026 Rehema's Exquisite Cakes. All rights reserved.</p>
+        <nav class="footer__legal-links" aria-label="Legal information">
+          <a href="#privacy-policy">Privacy policy</a>
+          <a href="#terms-of-use">Terms of use</a>
+        </nav>
+      </div>
+    </footer>
+
+    <section class="legal-section" id="privacy-policy" aria-labelledby="privacy-heading">
+      <div class="container legal-section__inner">
+        <h2 id="privacy-heading">Privacy policy</h2>
+        <p>This website does not send inquiry form entries to a server. Cart selections are stored in this browser. If you contact us by email, we use your message and address to respond to your request; we do not sell personal information. For privacy questions, contact <a href="mailto:rehemalosa@gmail.com">rehemalosa@gmail.com</a>.</p>
+      </div>
+    </section>
+    <section class="legal-section" id="terms-of-use" aria-labelledby="terms-heading">
+      <div class="container legal-section__inner">
+        <h2 id="terms-heading">Terms of use</h2>
+        <p>Product images and prices are provided as a guide and may vary with design, size, ingredients, and availability. An inquiry is not a confirmed order; details, pricing, and collection arrangements are agreed directly with our studio. Please allow 3–7 days for bespoke orders.</p>
+      </div>
+    </section>
+
+    <div id="imageModal" class="modal" aria-hidden="true">
+      <div class="modal__dialog" role="dialog" aria-modal="true" aria-label="Cake gallery">
+        <button class="modal__close" type="button" aria-label="Close gallery">&times;</button>
+        <div id="modalGallery" class="gallery-container"></div>
+      </div>
+    </div>
+
+    <script src="b.js"></script>
+  </body>
+</html>
